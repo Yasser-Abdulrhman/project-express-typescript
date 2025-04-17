@@ -4,9 +4,38 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/index.js",
+    "dev": "tsc-watch --onSuccess \"node ./dist/index.js\"",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/compression": "^1.7.5",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/helmet": "^4.0.0",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^22.14.1",
+    "tsc-watch": "^6.2.1",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "compression": "^1.8.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "joi": "^17.13.3",
+    "module-alias": "^2.2.3",
+    "mongoose": "^8.13.2",
+    "morgan": "^1.10.0"
+  },
+  "_moduleAliases": {
+    "@/resources": "dist/resources",
+    "@/utils": "dist/utils",
+    "@/middleware": "dist/middleware"
+  }
 }
