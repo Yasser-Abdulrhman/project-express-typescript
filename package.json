@@ -38,4 +38,5 @@
     "@/utils": "dist/utils",
     "@/middleware": "dist/middleware"
   }
+
 }
